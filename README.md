@@ -17,12 +17,12 @@ Due to both systemet and untappd not having any open API the script only finds a
 ## User example
 
 Example input:
-```bash
+```python
 Enter your Untappd username: *name*
 Enter a country name: belgien
 ```
 
-```bash
+```python
 Choose an option:
 1. Print Systemet Beer Names
 2. Print Untappd Beer Info
@@ -32,7 +32,7 @@ Choose an option:
 Enter your choice:
 ```
 
-```bash
+```python
 Enter your choice: 3
 ==================================================
 Unique Systemet Beers
