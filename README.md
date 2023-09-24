@@ -69,3 +69,18 @@ Beer 29: Tripel Karmeliet
 Beer 30: Kriek BOON
 --------------------------------------------------
 ```
+## Docker
+
+To run the project in docker run
+
+```bash
+docker build -t systemet:latest .
+```
+
+to build the image and run
+
+```bash
+docker run -i -t systemet 
+```
+
+to run the program.
