@@ -34,7 +34,7 @@ def systemet(country_name):
         page.goto(f'https://www.systembolaget.se/sortiment/ol/{country_name}/')
 
         # Handling age prompt
-        age_buttons =  page.query_selector_all('.css-c6bmr8.e3whs8q0 a.e180zcpo2.css-1bzli92.ev9wvac0')
+        age_buttons =  page.query_selector_all('a.e180zcpo2.css-1bzli92.ev9wvac0')
         if len(age_buttons) >= 2:
              age_buttons[1].click()  # Click the over 20 link
 
@@ -47,10 +47,10 @@ def systemet(country_name):
         page.wait_for_load_state('domcontentloaded')
 
         # Wait for the specific <p> elements to exist
-        page.wait_for_selector('p.css-18wuxp4.e3wog7r0', state="attached")
+        page.wait_for_selector('div.css-176nwz9.e18roaja0', state="attached")
 
         # Find and save all matching <p> elements to a list
-        p_elements =  page.query_selector_all('p.css-54mqg2.e3wog7r0')
+        p_elements =  page.query_selector_all('p.css-10o24dh.e3wog7r0')
         beer_names = [ p_element.text_content() for p_element in p_elements]
 
         browser.close()
